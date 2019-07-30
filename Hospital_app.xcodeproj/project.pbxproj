@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3710FF5722EEFB85005EBDB2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */; };
+		3710FF5922EEFC50005EBDB2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */; };
+		3710FF5B22EF496F005EBDB2 /* AddReseHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */; };
+		3710FF5D22EFB4E6005EBDB2 /* ReseConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */; };
+		3710FF5F22F0847C005EBDB2 /* CancelLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */; };
+		3710FF6122F0880F005EBDB2 /* CancelConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */; };
+		3710FF6322F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */; };
+		3710FF6522F0F901005EBDB2 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */; };
+		3710FF6722F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */; };
+		371CF61122E71E5D0075B646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF61022E71E5D0075B646 /* AppDelegate.swift */; };
+		371CF61322E71E5D0075B646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF61222E71E5D0075B646 /* ViewController.swift */; };
+		371CF61622E71E5D0075B646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61422E71E5D0075B646 /* Main.storyboard */; };
+		371CF61822E71E5E0075B646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61722E71E5E0075B646 /* Assets.xcassets */; };
+		371CF61B22E71E5E0075B646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61922E71E5E0075B646 /* LaunchScreen.storyboard */; };
+		371CF62322E71FC80075B646 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62222E71FC80075B646 /* TopViewController.swift */; };
+		371CF62522E724B50075B646 /* ReseCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62422E724B50075B646 /* ReseCalendarViewController.swift */; };
+		371CF62722E726B30075B646 /* ReseHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62622E726B30075B646 /* ReseHourViewController.swift */; };
+		371CF62922E7312C0075B646 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62822E7312C0075B646 /* UserLoginViewController.swift */; };
+		371CF62B22E73ECA0075B646 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */; };
+		371CF62D22E7424B0075B646 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62C22E7424B0075B646 /* RegisterViewController.swift */; };
+		371CF62F22E9A07C0075B646 /* ReseOrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */; };
+		371CF63122E9A0A90075B646 /* AddOrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */; };
+		371CF63322E9A0E00075B646 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF63222E9A0E00075B646 /* UserSearchViewController.swift */; };
+		FAABA8B2F498D0AB4B4CF28D /* Pods_Hospital_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A925580D79E6F3FDA7D7C8 /* Pods_Hospital_app.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReseHourViewController.swift; sourceTree = "<group>"; };
+		3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseConfirmViewController.swift; sourceTree = "<group>"; };
+		3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLoginViewController.swift; sourceTree = "<group>"; };
+		3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmViewController.swift; sourceTree = "<group>"; };
+		3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoyakuConfirmViewController.swift; sourceTree = "<group>"; };
+		3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoyakuCalendarViewController.swift; sourceTree = "<group>"; };
+		371CF60D22E71E5D0075B646 /* Hospital_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hospital_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		371CF61022E71E5D0075B646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		371CF61222E71E5D0075B646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		371CF61522E71E5D0075B646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		371CF61722E71E5E0075B646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		371CF61A22E71E5E0075B646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		371CF61C22E71E5E0075B646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		371CF62222E71FC80075B646 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		371CF62422E724B50075B646 /* ReseCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseCalendarViewController.swift; sourceTree = "<group>"; };
+		371CF62622E726B30075B646 /* ReseHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseHourViewController.swift; sourceTree = "<group>"; };
+		371CF62822E7312C0075B646 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		371CF62C22E7424B0075B646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseOrSearchViewController.swift; sourceTree = "<group>"; };
+		371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrSearchViewController.swift; sourceTree = "<group>"; };
+		371CF63222E9A0E00075B646 /* UserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
+		8F5387EA5DB0B6614CF117A5 /* Pods-Hospital_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hospital_app/Pods-Hospital_app.release.xcconfig"; sourceTree = "<group>"; };
+		E2A925580D79E6F3FDA7D7C8 /* Pods_Hospital_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hospital_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E851FFB88B2F0B8B052A2272 /* Pods-Hospital_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hospital_app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hospital_app/Pods-Hospital_app.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		371CF60A22E71E5D0075B646 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAABA8B2F498D0AB4B4CF28D /* Pods_Hospital_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		371CF60422E71E5D0075B646 = {
+			isa = PBXGroup;
+			children = (
+				371CF60F22E71E5D0075B646 /* Hospital_app */,
+				371CF60E22E71E5D0075B646 /* Products */,
+				D434A1DFCA44CCAC7C2B9FBA /* Pods */,
+				C525622481881631126B5502 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		371CF60E22E71E5D0075B646 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				371CF60D22E71E5D0075B646 /* Hospital_app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		371CF60F22E71E5D0075B646 /* Hospital_app */ = {
+			isa = PBXGroup;
+			children = (
+				371CF61022E71E5D0075B646 /* AppDelegate.swift */,
+				371CF61222E71E5D0075B646 /* ViewController.swift */,
+				371CF61422E71E5D0075B646 /* Main.storyboard */,
+				371CF61722E71E5E0075B646 /* Assets.xcassets */,
+				371CF61922E71E5E0075B646 /* LaunchScreen.storyboard */,
+				371CF61C22E71E5E0075B646 /* Info.plist */,
+				371CF62222E71FC80075B646 /* TopViewController.swift */,
+				371CF62422E724B50075B646 /* ReseCalendarViewController.swift */,
+				371CF62622E726B30075B646 /* ReseHourViewController.swift */,
+				371CF62822E7312C0075B646 /* UserLoginViewController.swift */,
+				371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */,
+				371CF62C22E7424B0075B646 /* RegisterViewController.swift */,
+				371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */,
+				371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */,
+				371CF63222E9A0E00075B646 /* UserSearchViewController.swift */,
+				3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */,
+				3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */,
+				3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */,
+				3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */,
+				3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */,
+				3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */,
+				3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */,
+				3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */,
+				3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */,
+			);
+			path = Hospital_app;
+			sourceTree = "<group>";
+		};
+		C525622481881631126B5502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2A925580D79E6F3FDA7D7C8 /* Pods_Hospital_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D434A1DFCA44CCAC7C2B9FBA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E851FFB88B2F0B8B052A2272 /* Pods-Hospital_app.debug.xcconfig */,
+				8F5387EA5DB0B6614CF117A5 /* Pods-Hospital_app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		371CF60C22E71E5D0075B646 /* Hospital_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371CF61F22E71E5E0075B646 /* Build configuration list for PBXNativeTarget "Hospital_app" */;
+			buildPhases = (
+				167299824B44C730A66367F6 /* [CP] Check Pods Manifest.lock */,
+				371CF60922E71E5D0075B646 /* Sources */,
+				371CF60A22E71E5D0075B646 /* Frameworks */,
+				371CF60B22E71E5D0075B646 /* Resources */,
+				ADB674E4E80675C0EF262DD5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hospital_app;
+			productName = Hospital_app;
+			productReference = 371CF60D22E71E5D0075B646 /* Hospital_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		371CF60522E71E5D0075B646 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = shotaro;
+				TargetAttributes = {
+					371CF60C22E71E5D0075B646 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 371CF60822E71E5D0075B646 /* Build configuration list for PBXProject "Hospital_app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 371CF60422E71E5D0075B646;
+			productRefGroup = 371CF60E22E71E5D0075B646 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				371CF60C22E71E5D0075B646 /* Hospital_app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371CF60B22E71E5D0075B646 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3710FF5722EEFB85005EBDB2 /* SignIn.storyboard in Resources */,
+				371CF61B22E71E5E0075B646 /* LaunchScreen.storyboard in Resources */,
+				371CF61822E71E5E0075B646 /* Assets.xcassets in Resources */,
+				371CF61622E71E5D0075B646 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		167299824B44C730A66367F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hospital_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB674E4E80675C0EF262DD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Hospital_app/Pods-Hospital_app-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CalculateCalendarLogic/CalculateCalendarLogic.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/NCMB/NCMB.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CalculateCalendarLogic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NCMB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hospital_app/Pods-Hospital_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		371CF60922E71E5D0075B646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3710FF6322F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift in Sources */,
+				371CF62322E71FC80075B646 /* TopViewController.swift in Sources */,
+				371CF62722E726B30075B646 /* ReseHourViewController.swift in Sources */,
+				371CF61322E71E5D0075B646 /* ViewController.swift in Sources */,
+				3710FF5F22F0847C005EBDB2 /* CancelLoginViewController.swift in Sources */,
+				371CF62D22E7424B0075B646 /* RegisterViewController.swift in Sources */,
+				3710FF5B22EF496F005EBDB2 /* AddReseHourViewController.swift in Sources */,
+				371CF63322E9A0E00075B646 /* UserSearchViewController.swift in Sources */,
+				3710FF5D22EFB4E6005EBDB2 /* ReseConfirmViewController.swift in Sources */,
+				371CF62922E7312C0075B646 /* UserLoginViewController.swift in Sources */,
+				3710FF6722F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift in Sources */,
+				3710FF6522F0F901005EBDB2 /* SearchResultViewController.swift in Sources */,
+				371CF62F22E9A07C0075B646 /* ReseOrSearchViewController.swift in Sources */,
+				371CF62522E724B50075B646 /* ReseCalendarViewController.swift in Sources */,
+				3710FF5922EEFC50005EBDB2 /* SignInViewController.swift in Sources */,
+				371CF63122E9A0A90075B646 /* AddOrSearchViewController.swift in Sources */,
+				3710FF6122F0880F005EBDB2 /* CancelConfirmViewController.swift in Sources */,
+				371CF61122E71E5D0075B646 /* AppDelegate.swift in Sources */,
+				371CF62B22E73ECA0075B646 /* AdminLoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		371CF61422E71E5D0075B646 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371CF61522E71E5D0075B646 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		371CF61922E71E5E0075B646 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371CF61A22E71E5E0075B646 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		371CF61D22E71E5E0075B646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		371CF61E22E71E5E0075B646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		371CF62022E71E5E0075B646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E851FFB88B2F0B8B052A2272 /* Pods-Hospital_app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M82FLD6C75;
+				INFOPLIST_FILE = Hospital_app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.shotaroooe.Hospital-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		371CF62122E71E5E0075B646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5387EA5DB0B6614CF117A5 /* Pods-Hospital_app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M82FLD6C75;
+				INFOPLIST_FILE = Hospital_app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "net.shotaroooe.Hospital-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		371CF60822E71E5D0075B646 /* Build configuration list for PBXProject "Hospital_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371CF61D22E71E5E0075B646 /* Debug */,
+				371CF61E22E71E5E0075B646 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371CF61F22E71E5E0075B646 /* Build configuration list for PBXNativeTarget "Hospital_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371CF62022E71E5E0075B646 /* Debug */,
+				371CF62122E71E5E0075B646 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 371CF60522E71E5D0075B646 /* Project object */;
+}

@@ -1,0 +1,37 @@
+PODS:
+  - CalculateCalendarLogic (0.3.0)
+  - FSCalendar (2.8.0)
+  - NCMB (3.0.1)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CalculateCalendarLogic
+  - FSCalendar
+  - NCMB (from `https://github.com/NIFTYCloud-mbaas/ncmb_ios.git`, branch `develop`)
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CalculateCalendarLogic
+    - FSCalendar
+    - SVProgressHUD
+
+EXTERNAL SOURCES:
+  NCMB:
+    :branch: develop
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
+
+CHECKOUT OPTIONS:
+  NCMB:
+    :commit: c090411e8135708b505c46c145772cf39c5ca464
+    :git: https://github.com/NIFTYCloud-mbaas/ncmb_ios.git
+
+SPEC CHECKSUMS:
+  CalculateCalendarLogic: cd5b2c706a8628bb924c5ee9d05c4f61bdbaf390
+  FSCalendar: 3a5ed3636e2ba1b83ebebfcf0c2603105a6f5efe
+  NCMB: 470e5d51a643b0b77487792c179c1454ee0a55ae
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 199e266a7fb13c7df75647c1c1b967abf77c0da6
+
+COCOAPODS: 1.5.3
