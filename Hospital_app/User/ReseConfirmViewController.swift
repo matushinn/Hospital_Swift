@@ -22,6 +22,9 @@ class ReseConfirmViewController: UIViewController {
     var hour_flag = "0"
     var moreHour_flag = "0"
     
+    let Minutes20 = ["8:00~8:20","8:20~8:40","8:40~9:00","9:00~9:20","9:20~9:40","9:40~10:00","10:00~10:20","10:20~10:40","10:40~11:00","11:00~11:20","11:20~11:40","11:40~12:00","12:00~12:20","12:20~12:40","15:00~15:20","15:20~15:40","15:40~16:00","16:00~16:20","16:20~16:40","16:40~17:00","17:00~17:20","17:20~17:40","17:40~18:00","18:00~18:20","18:20~18:40"]
+    
+    let Minutes40 = ["8:00~8:40","8:40~9:20","9:20~10:00","10:00~10:40","10:40~11:20","11:20~12:00","12:00~12:40","15:00~15:40","15:40~16:20","16:20~17:00","17:00~17:40","17:40~18:20"]
     
     
     @IBOutlet weak var userLabel: UILabel!
@@ -33,99 +36,17 @@ class ReseConfirmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch hour {
-        case "8:00~8:20":
-            self.hour_flag = "0"
-        case "8:20~8:40":
-            self.hour_flag = "1"
-        case "8:40~9:00":
-            self.hour_flag = "2"
-        case "9:00~9:20":
-            self.hour_flag = "3"
-        case "9:20~9:40":
-            self.hour_flag = "4"
-        case "9:40~10:00":
-            self.hour_flag = "5"
-        case "10:00~10:20":
-            self.hour_flag = "6"
-        case "10:20~10:40":
-            self.hour_flag = "7"
-        case "10:40~11:00":
-            self.hour_flag = "8"
-        case "11:00~11:20":
-            self.hour_flag = "9"
-        case "11:20~11:40":
-            self.hour_flag = "10"
-        case "11:40~12:00":
-            self.hour_flag = "11"
-        case "12:00~12:20":
-            self.hour_flag = "12"
-        case "12:20~12:40":
-            self.hour_flag = "13"
-        case "15:00~15:20":
-            self.hour_flag = "14"
-        case "15:20~15:40":
-            self.hour_flag = "15"
-        case "15:40~16:00":
-            self.hour_flag = "16"
-        case "16:00~16:20":
-            self.hour_flag = "17"
-        case "16:20~16:40":
-            self.hour_flag = "18"
-        case "16:40~17:00":
-            self.hour_flag = "19"
-        case "17:00~17:20":
-            self.hour_flag = "20"
-        case "17:20~17:40":
-            self.hour_flag = "21"
-        case "17:40~18:00":
-            self.hour_flag = "22"
-        case "18:00~18:20":
-            self.hour_flag = "23"
-        case "18:20~18:40":
-            self.hour_flag = "24"
-        case "8:00~8:40":
-            self.hour_flag = "0"
-            self.moreHour_flag = "1"
-        case "8:40~9:20":
-            self.hour_flag = "2"
-            self.moreHour_flag = "3"
-        case "9:20~10:00":
-            self.hour_flag = "4"
-            self.moreHour_flag = "5"
-        case "10:00~10:40":
-            self.hour_flag = "6"
-            self.moreHour_flag = "7"
-        case "10:40~11:20":
-            self.hour_flag = "8"
-            self.moreHour_flag = "9"
-        case "11:20~12:00":
-            self.hour_flag = "10"
-            self.moreHour_flag = "11"
-        case "12:00~12:40":
-            self.hour_flag = "12"
-            self.moreHour_flag = "13"
-        case "15:00~15:40":
-            self.hour_flag = "14"
-            self.moreHour_flag = "15"
-        
-        case "15:40~16:20":
-            self.hour_flag = "16"
-            self.moreHour_flag = "17"
-        case "16:20~17:00":
-            self.hour_flag = "18"
-            self.moreHour_flag = "19"
-        
-        case "17:00~17:40":
-            self.hour_flag = "20"
-            self.moreHour_flag = "21"
-        case "17:40~18:20":
-            self.hour_flag = "22"
-            self.moreHour_flag = "23"
-        
-        default:
-            break
+        for i in 0...24{
+            if hour == self.Minutes20[i]{
+                self.hour_flag = String(i)
+            }
+            
+            if hour == self.Minutes40[i]{
+                self.hour_flag = String(i)
+                self.moreHour_flag = String(i+1)
+            }
         }
+        
         
         let query = NCMBQuery(className: "Users")
         

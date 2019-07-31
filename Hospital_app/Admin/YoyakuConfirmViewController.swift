@@ -44,10 +44,12 @@ class YoyakuConfirmViewController: UIViewController {
                         if self.day == userDate{
                             for i in 0...24{
                                 if userObject.object(forKey:  String(i)) != nil{
-                                    let check = userObject.object(forKey: String(i)) as! String
-                                    self.hourLabels[i].text = self.Minutes20[i]
-                                    self.checkLabels[i].text = check
+                                     let check = userObject.object(forKey: String(i)) as! String
+                                        self.hourLabels[i].text = self.Minutes20[i]
+                                        self.checkLabels[i].text = check
                                     
+                                }else{
+                                    self.hourLabels[i].text = self.Minutes20[i]
                                 }
                             }
                         }
@@ -72,6 +74,8 @@ class YoyakuConfirmViewController: UIViewController {
                                     self.hourLabels[i].text = self.Minutes20[i]
                                     self.checkLabels[i].text = check
                                     
+                                }else{
+                                    self.hourLabels[i].text = self.Minutes20[i]
                                 }
                             }
                         }
@@ -95,6 +99,8 @@ class YoyakuConfirmViewController: UIViewController {
                                     self.hourLabels[i].text = self.Minutes20[i]
                                     self.checkLabels[i].text = check
                                     
+                                }else{
+                                    self.hourLabels[i].text = self.Minutes20[i]
                                 }
                             }
                         }

@@ -17,7 +17,6 @@
 		3710FF6522F0F901005EBDB2 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */; };
 		3710FF6722F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */; };
 		371CF61122E71E5D0075B646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF61022E71E5D0075B646 /* AppDelegate.swift */; };
-		371CF61322E71E5D0075B646 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF61222E71E5D0075B646 /* ViewController.swift */; };
 		371CF61622E71E5D0075B646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61422E71E5D0075B646 /* Main.storyboard */; };
 		371CF61822E71E5E0075B646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61722E71E5E0075B646 /* Assets.xcassets */; };
 		371CF61B22E71E5E0075B646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371CF61922E71E5E0075B646 /* LaunchScreen.storyboard */; };
@@ -25,7 +24,6 @@
 		371CF62522E724B50075B646 /* ReseCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62422E724B50075B646 /* ReseCalendarViewController.swift */; };
 		371CF62722E726B30075B646 /* ReseHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62622E726B30075B646 /* ReseHourViewController.swift */; };
 		371CF62922E7312C0075B646 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62822E7312C0075B646 /* UserLoginViewController.swift */; };
-		371CF62B22E73ECA0075B646 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */; };
 		371CF62D22E7424B0075B646 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62C22E7424B0075B646 /* RegisterViewController.swift */; };
 		371CF62F22E9A07C0075B646 /* ReseOrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */; };
 		371CF63122E9A0A90075B646 /* AddOrSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */; };
@@ -45,7 +43,6 @@
 		3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoyakuCalendarViewController.swift; sourceTree = "<group>"; };
 		371CF60D22E71E5D0075B646 /* Hospital_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hospital_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371CF61022E71E5D0075B646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		371CF61222E71E5D0075B646 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		371CF61522E71E5D0075B646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		371CF61722E71E5E0075B646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371CF61A22E71E5E0075B646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 		371CF62422E724B50075B646 /* ReseCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseCalendarViewController.swift; sourceTree = "<group>"; };
 		371CF62622E726B30075B646 /* ReseHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseHourViewController.swift; sourceTree = "<group>"; };
 		371CF62822E7312C0075B646 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
-		371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		371CF62C22E7424B0075B646 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseOrSearchViewController.swift; sourceTree = "<group>"; };
 		371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrSearchViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +72,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3710FF6822F13FA7005EBDB2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				371CF62822E7312C0075B646 /* UserLoginViewController.swift */,
+				371CF62422E724B50075B646 /* ReseCalendarViewController.swift */,
+				371CF62622E726B30075B646 /* ReseHourViewController.swift */,
+				3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */,
+				3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3710FF6922F13FBB005EBDB2 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */,
+				371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */,
+				371CF63222E9A0E00075B646 /* UserSearchViewController.swift */,
+				3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */,
+				371CF62C22E7424B0075B646 /* RegisterViewController.swift */,
+				3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */,
+				3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		3710FF6A22F14069005EBDB2 /* Cancel */ = {
+			isa = PBXGroup;
+			children = (
+				3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */,
+				3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */,
+			);
+			path = Cancel;
+			sourceTree = "<group>";
+		};
+		3710FF6B22F140C3005EBDB2 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */,
+				3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		371CF60422E71E5D0075B646 = {
 			isa = PBXGroup;
 			children = (
@@ -97,30 +137,16 @@
 		371CF60F22E71E5D0075B646 /* Hospital_app */ = {
 			isa = PBXGroup;
 			children = (
+				3710FF6B22F140C3005EBDB2 /* SignIn */,
+				3710FF6A22F14069005EBDB2 /* Cancel */,
+				3710FF6922F13FBB005EBDB2 /* Admin */,
+				3710FF6822F13FA7005EBDB2 /* User */,
 				371CF61022E71E5D0075B646 /* AppDelegate.swift */,
-				371CF61222E71E5D0075B646 /* ViewController.swift */,
+				371CF62222E71FC80075B646 /* TopViewController.swift */,
 				371CF61422E71E5D0075B646 /* Main.storyboard */,
 				371CF61722E71E5E0075B646 /* Assets.xcassets */,
 				371CF61922E71E5E0075B646 /* LaunchScreen.storyboard */,
 				371CF61C22E71E5E0075B646 /* Info.plist */,
-				371CF62222E71FC80075B646 /* TopViewController.swift */,
-				371CF62422E724B50075B646 /* ReseCalendarViewController.swift */,
-				371CF62622E726B30075B646 /* ReseHourViewController.swift */,
-				371CF62822E7312C0075B646 /* UserLoginViewController.swift */,
-				371CF62A22E73ECA0075B646 /* AdminLoginViewController.swift */,
-				371CF62C22E7424B0075B646 /* RegisterViewController.swift */,
-				371CF62E22E9A07C0075B646 /* ReseOrSearchViewController.swift */,
-				371CF63022E9A0A90075B646 /* AddOrSearchViewController.swift */,
-				371CF63222E9A0E00075B646 /* UserSearchViewController.swift */,
-				3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */,
-				3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */,
-				3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */,
-				3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */,
-				3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */,
-				3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */,
-				3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */,
-				3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */,
-				3710FF6622F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift */,
 			);
 			path = Hospital_app;
 			sourceTree = "<group>";
@@ -272,7 +298,6 @@
 				3710FF6322F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift in Sources */,
 				371CF62322E71FC80075B646 /* TopViewController.swift in Sources */,
 				371CF62722E726B30075B646 /* ReseHourViewController.swift in Sources */,
-				371CF61322E71E5D0075B646 /* ViewController.swift in Sources */,
 				3710FF5F22F0847C005EBDB2 /* CancelLoginViewController.swift in Sources */,
 				371CF62D22E7424B0075B646 /* RegisterViewController.swift in Sources */,
 				3710FF5B22EF496F005EBDB2 /* AddReseHourViewController.swift in Sources */,
@@ -287,7 +312,6 @@
 				371CF63122E9A0A90075B646 /* AddOrSearchViewController.swift in Sources */,
 				3710FF6122F0880F005EBDB2 /* CancelConfirmViewController.swift in Sources */,
 				371CF61122E71E5D0075B646 /* AppDelegate.swift in Sources */,
-				371CF62B22E73ECA0075B646 /* AdminLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +461,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82FLD6C75;
 				INFOPLIST_FILE = Hospital_app/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,10 +477,10 @@
 			baseConfigurationReference = 8F5387EA5DB0B6614CF117A5 /* Pods-Hospital_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M82FLD6C75;
 				INFOPLIST_FILE = Hospital_app/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
