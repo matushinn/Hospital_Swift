@@ -13,6 +13,7 @@ import SVProgressHUD
 class SearchResultViewController: UIViewController {
 
     var userName = ""
+    var userBirth = ""
     
     @IBOutlet weak var userIdLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -22,7 +23,7 @@ class SearchResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        userNameLabel.text = userName
+        userNameLabel.text = "お名前 : "+userName+" さん"
         let query = NCMBQuery(className: "Users")
         
         query?.findObjectsInBackground({ (result, error) in
@@ -31,9 +32,12 @@ class SearchResultViewController: UIViewController {
             }else{
                 for userObject in result as! [NCMBObject]{
                     let userName = userObject.object(forKey: "userName") as! String
+                    let userBirth = userObject.object(forKey: "birthday") as! String
                     
-                    if self.userName == userName{
-                        self.userIdLabel.text = userObject.object(forKey: "userId") as! String
+                    
+                    
+                    if self.userName == userName && self.userBirth == userBirth{
+                        self.userIdLabel.text =  userObject.object(forKey: "userId") as! String
                     }
                 }
             }

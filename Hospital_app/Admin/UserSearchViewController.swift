@@ -13,31 +13,35 @@ import SVProgressHUD
 class UserSearchViewController: UIViewController,UITextFieldDelegate {
 
     var userName = ""
+    var userBirth = ""
     
-    @IBOutlet weak var userIdTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
+    
+    @IBOutlet weak var birthTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        userIdTextField.delegate = self
+        userNameTextField.delegate = self
+        birthTextField.delegate = self
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let searchVC = segue.destination as! SearchResultViewController
             searchVC.userName = userName
-            
+            searchVC.userBirth = userBirth
         }
     }
     
     @IBAction func search(_ sender: Any) {
         let query = NCMBQuery(className: "Users")
         
-        if userIdTextField.text == ""{
+        if userNameTextField.text == "" || birthTextField.text == ""{
             SVProgressHUD.showSuccess(withStatus: "入力してください")
             return
         }
         
-        query?.includeKey("userId")
         
         query?.findObjectsInBackground({ (result, error) in
             if error != nil{
@@ -45,11 +49,10 @@ class UserSearchViewController: UIViewController,UITextFieldDelegate {
             }else{
                 for userObject in result as! [NCMBObject]{
                     self.userName = userObject.object(forKey: "userName") as! String
+                    self.userBirth = userObject.object(forKey: "birthday") as! String
                     
-                    if self.userIdTextField.text == self.userName{
+                    if self.userNameTextField.text == self.userName && self.birthTextField.text == self.userBirth{
                         self.performSegue(withIdentifier: "toDetail", sender: nil)
-                    }else{
-                        
                     }
                     
                 }
