@@ -11,6 +11,9 @@ import NCMB
 import SVProgressHUD
 
 class UserLoginViewController: UIViewController,UITextFieldDelegate {
+    
+    var userName = ""
+    
 
     @IBOutlet weak var userIdTextField: UITextField!
     override func viewDidLoad() {
@@ -29,6 +32,7 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
             let user = userIdTextField.text!
             let calendarVC = segue.destination as! ReseCalendarViewController
             calendarVC.user = user
+            calendarVC.userName = userName
             
         }
         
@@ -52,9 +56,8 @@ class UserLoginViewController: UIViewController,UITextFieldDelegate {
                     let userId = userObject.object(forKey: "userId") as! String
                     
                     if self.userIdTextField.text == userId{
+                        self.userName = userObject.object(forKey: "userName") as! String
                         self.performSegue(withIdentifier: "toReseCalendar", sender: nil)
-                    }else{
-                        
                     }
                     
                 }

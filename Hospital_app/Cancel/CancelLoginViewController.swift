@@ -11,6 +11,10 @@ import SVProgressHUD
 
 class CancelLoginViewController: UIViewController,UITextFieldDelegate {
     
+    var user = ""
+    var userName = ""
+    
+    
     @IBOutlet weak var userIdTextField: UITextField!
     
     override func viewDidLoad() {
@@ -25,10 +29,11 @@ class CancelLoginViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCancelConfirm" {
+        if segue.identifier == "toCancelCalendar" {
             let user = userIdTextField.text!
-            let cancelVC = segue.destination as! CancelConfirmViewController
+            let cancelVC = segue.destination as! CancelCalendarViewController
             cancelVC.user = user
+            cancelVC.userName = userName
             
         }
         
@@ -52,14 +57,14 @@ class CancelLoginViewController: UIViewController,UITextFieldDelegate {
                     let userId = userObject.object(forKey: "userId") as! String
                     
                     if self.userIdTextField.text == userId{
-                        self.performSegue(withIdentifier: "toCancelConfirm", sender: nil)
-                    }else{
-                        
+                        self.userName = userObject.object(forKey: "userName") as! String
+                        self.performSegue(withIdentifier: "toCancelCalendar", sender: nil)
                     }
                     
                 }
             }
         })
+       
         
     }
 

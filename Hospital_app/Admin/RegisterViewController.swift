@@ -66,22 +66,15 @@ class RegisterViewController: UIViewController,UITextFieldDelegate {
                         if error != nil{
                             SVProgressHUD.dismiss()
                         }else{
-                            SVProgressHUD.showSuccess(withStatus: "保存成功")
                             
                         }
                     })
                 
             }
         })
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     
     }
 

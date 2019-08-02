@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3701029822F389FA00565C9F /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701029722F389FA00565C9F /* AdminLoginViewController.swift */; };
+		3701029A22F38BEE00565C9F /* CancelCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701029922F38BEE00565C9F /* CancelCalendarViewController.swift */; };
+		3701029C22F38CCC00565C9F /* CancelHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3701029B22F38CCC00565C9F /* CancelHourViewController.swift */; };
 		3710FF5722EEFB85005EBDB2 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */; };
 		3710FF5922EEFC50005EBDB2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */; };
-		3710FF5B22EF496F005EBDB2 /* AddReseHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */; };
 		3710FF5D22EFB4E6005EBDB2 /* ReseConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */; };
 		3710FF5F22F0847C005EBDB2 /* CancelLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */; };
 		3710FF6122F0880F005EBDB2 /* CancelConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */; };
@@ -32,9 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3701029722F389FA00565C9F /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		3701029922F38BEE00565C9F /* CancelCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelCalendarViewController.swift; sourceTree = "<group>"; };
+		3701029B22F38CCC00565C9F /* CancelHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelHourViewController.swift; sourceTree = "<group>"; };
 		3710FF5622EEFB85005EBDB2 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		3710FF5822EEFC50005EBDB2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReseHourViewController.swift; sourceTree = "<group>"; };
 		3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReseConfirmViewController.swift; sourceTree = "<group>"; };
 		3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelLoginViewController.swift; sourceTree = "<group>"; };
 		3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelConfirmViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +82,6 @@
 				371CF62822E7312C0075B646 /* UserLoginViewController.swift */,
 				371CF62422E724B50075B646 /* ReseCalendarViewController.swift */,
 				371CF62622E726B30075B646 /* ReseHourViewController.swift */,
-				3710FF5A22EF496E005EBDB2 /* AddReseHourViewController.swift */,
 				3710FF5C22EFB4E6005EBDB2 /* ReseConfirmViewController.swift */,
 			);
 			path = User;
@@ -94,6 +97,7 @@
 				371CF62C22E7424B0075B646 /* RegisterViewController.swift */,
 				3710FF6422F0F901005EBDB2 /* SearchResultViewController.swift */,
 				3710FF6222F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift */,
+				3701029722F389FA00565C9F /* AdminLoginViewController.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -103,6 +107,8 @@
 			children = (
 				3710FF5E22F0847C005EBDB2 /* CancelLoginViewController.swift */,
 				3710FF6022F0880F005EBDB2 /* CancelConfirmViewController.swift */,
+				3701029922F38BEE00565C9F /* CancelCalendarViewController.swift */,
+				3701029B22F38CCC00565C9F /* CancelHourViewController.swift */,
 			);
 			path = Cancel;
 			sourceTree = "<group>";
@@ -298,17 +304,19 @@
 				3710FF6322F0DE6F005EBDB2 /* YoyakuConfirmViewController.swift in Sources */,
 				371CF62322E71FC80075B646 /* TopViewController.swift in Sources */,
 				371CF62722E726B30075B646 /* ReseHourViewController.swift in Sources */,
+				3701029A22F38BEE00565C9F /* CancelCalendarViewController.swift in Sources */,
 				3710FF5F22F0847C005EBDB2 /* CancelLoginViewController.swift in Sources */,
 				371CF62D22E7424B0075B646 /* RegisterViewController.swift in Sources */,
-				3710FF5B22EF496F005EBDB2 /* AddReseHourViewController.swift in Sources */,
 				371CF63322E9A0E00075B646 /* UserSearchViewController.swift in Sources */,
 				3710FF5D22EFB4E6005EBDB2 /* ReseConfirmViewController.swift in Sources */,
 				371CF62922E7312C0075B646 /* UserLoginViewController.swift in Sources */,
 				3710FF6722F0FA9C005EBDB2 /* YoyakuCalendarViewController.swift in Sources */,
 				3710FF6522F0F901005EBDB2 /* SearchResultViewController.swift in Sources */,
 				371CF62F22E9A07C0075B646 /* ReseOrSearchViewController.swift in Sources */,
+				3701029822F389FA00565C9F /* AdminLoginViewController.swift in Sources */,
 				371CF62522E724B50075B646 /* ReseCalendarViewController.swift in Sources */,
 				3710FF5922EEFC50005EBDB2 /* SignInViewController.swift in Sources */,
+				3701029C22F38CCC00565C9F /* CancelHourViewController.swift in Sources */,
 				371CF63122E9A0A90075B646 /* AddOrSearchViewController.swift in Sources */,
 				3710FF6122F0880F005EBDB2 /* CancelConfirmViewController.swift in Sources */,
 				371CF61122E71E5D0075B646 /* AppDelegate.swift in Sources */,

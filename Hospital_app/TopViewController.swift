@@ -14,6 +14,11 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let f = DateFormatter()
+        f.dateStyle = .medium
+        f.timeStyle = .none
+        let now = Date()
+        print(f.string(from: now))
     }
     
 

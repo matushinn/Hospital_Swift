@@ -63,6 +63,13 @@ class UserSearchViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    @IBAction func toTop(_ sender: Any) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+    
+    
     
 
 }

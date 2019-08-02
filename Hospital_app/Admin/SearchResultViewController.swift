@@ -19,10 +19,9 @@ class SearchResultViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
+        super.viewDidLoad() 
+    }
+    override func viewWillAppear(_ animated: Bool) {
         userNameLabel.text = "お名前 : "+userName+" さん"
         let query = NCMBQuery(className: "Users")
         
@@ -42,8 +41,11 @@ class SearchResultViewController: UIViewController {
                 }
             }
         })
-        
-        
+    }
+    @IBAction func toTop(_ sender: Any) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     

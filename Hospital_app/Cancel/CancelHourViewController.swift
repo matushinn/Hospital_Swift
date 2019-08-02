@@ -1,23 +1,21 @@
 //
-//  ReseHourViewController.swift
+//  CancelHourViewController.swift
 //  Hospital_app
 //
-//  Created by 大江祥太郎 on 2019/07/23.
+//  Created by 大江祥太郎 on 2019/08/02.
 //  Copyright © 2019 shotaro. All rights reserved.
 //
 
-import UIKit
 import NCMB
 import SVProgressHUD
 
-class ReseHourViewController: UIViewController {
+class CancelHourViewController: UIViewController {
     
     var user = ""
     var rese_flag = 1
     var day = ""
     var hour = ""
     var pt = "PT1"
-    
     var userName = ""
     
     
@@ -25,6 +23,7 @@ class ReseHourViewController: UIViewController {
     
     
     var row_check = 0
+    
     
     @IBOutlet var hourLabels: [UIButton]!
     
@@ -34,11 +33,11 @@ class ReseHourViewController: UIViewController {
     let ptClassName = ["pt1_yoyaku","pt2_yoyaku","pt3_yoyaku"]
     
     
-    
+    let indexes = ["0":0,"1":0,"2":1,"3":1,"4":2,"5":2,"6":3,"7":3,"8":4,"9":4,"10":5,"11":5,"12":6,"13":6,"14":7,"15":7,"16":8,"17":8,"18":9,"19":9,"20":10,"21":10,"22":11,"23":11,"24":11]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -47,14 +46,14 @@ class ReseHourViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toConfirm"{
-            let reseConfirmVC = segue.destination as! ReseConfirmViewController
-            reseConfirmVC.user = user
-            reseConfirmVC.rese_flag = rese_flag
-            reseConfirmVC.day = day
-            reseConfirmVC.hour = hour
-            reseConfirmVC.pt = pt
-            reseConfirmVC.userName = userName
+        if segue.identifier == "toCancelConfirm"{
+            let cancelVC = segue.destination as! CancelConfirmViewController
+            cancelVC.user = user
+            cancelVC.rese_flag = rese_flag
+            cancelVC.day = day
+            cancelVC.hour = hour
+            cancelVC.pt = pt
+            cancelVC.userName = userName
         }
     }
     
@@ -76,10 +75,11 @@ class ReseHourViewController: UIViewController {
                                     
                                     for name in self.userNames{
                                         if userObject.object(forKey: String(i)) != nil{
+                                            
                                             if String(name) == userObject.object(forKey: String(i)) as! String{
                                                 if self.userName == String(name){
                                                     self.hourLabels[i].setTitle(self.Minutes20[i]+"  "+self.userName, for: .normal)
-                                                    self.hourLabels[i].isEnabled = false
+                                                    self.hourLabels[i].isEnabled = true
                                                 }else{
                                                     self.hourLabels[i].setTitle(self.Minutes20[i]+"✖️", for: .normal)
                                                     self.hourLabels[i].isEnabled = false
@@ -88,7 +88,7 @@ class ReseHourViewController: UIViewController {
                                         }else{
                                             
                                             self.hourLabels[i].setTitle(self.Minutes20[i]+"◯", for: .normal)
-                                            self.hourLabels[i].isEnabled = true
+                                            self.hourLabels[i].isEnabled = false
                                         }
                                     }
                                     
@@ -102,16 +102,16 @@ class ReseHourViewController: UIViewController {
                 })
             }
         }
-        
     }
-    
     @IBAction func hourButtons(_ sender: UIButton) {
         for i in 0...24{
             if sender.tag == i{
                 self.hour = Minutes20[i]
             }
         }
-        self.performSegue(withIdentifier: "toConfirm", sender: nil)
+        self.loadButton()
+        
+        self.performSegue(withIdentifier: "toCancelConfirm", sender: nil)
     }
     
     @IBAction func change(_ sender: UISegmentedControl) {
@@ -125,13 +125,13 @@ class ReseHourViewController: UIViewController {
         default:
             break
         }
-        print(self.pt)
         loadButton()
     }
     
+
+    
+   
     
 }
-
-
 
 

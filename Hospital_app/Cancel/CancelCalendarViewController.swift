@@ -1,8 +1,8 @@
 //
-//  ReseCalendarViewController.swift
+//  CancelCalendarViewController.swift
 //  Hospital_app
 //
-//  Created by 大江祥太郎 on 2019/07/23.
+//  Created by 大江祥太郎 on 2019/08/02.
 //  Copyright © 2019 shotaro. All rights reserved.
 //
 
@@ -12,14 +12,16 @@ import CalculateCalendarLogic
 import NCMB
 import SVProgressHUD
 
-class ReseCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance{
+class CancelCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance{
     
     var user = ""
     var rese_flag = 0
     var day = ""
     var userName = ""
     
+    
     var userNames = [String]()
+    
     
     @IBOutlet weak var calendar: FSCalendar!
     
@@ -101,9 +103,7 @@ class ReseCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendar
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition)
     {
-    
         let selectDay = getDay(date)
-        
         let today : Date = Date(timeIntervalSinceNow: -60*60*24)
         
         
@@ -125,28 +125,29 @@ class ReseCalendarViewController: UIViewController,FSCalendarDelegate,FSCalendar
                     for userObject in result as! [NCMBObject]{
                         let name = userObject.object(forKey: "userName") as! String
                         self.userNames.append(name)
-                        self.performSegue(withIdentifier: "toHour", sender: nil)
+                        self.performSegue(withIdentifier: "toCancelHour", sender: nil)
                     }
                 }
             })
         }else{
-            print("予約できません。")
+            print("キャンセルできません。")
         }
- 
+        
         
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHour" {
-            let hourVC = segue.destination as! ReseHourViewController
-            hourVC.rese_flag = rese_flag
-            hourVC.user = user
-            hourVC.day = day
-            hourVC.userNames = userNames
-            hourVC.userName = userName
+        if segue.identifier == "toCancelHour" {
+            let cancelVC = segue.destination as! CancelHourViewController
+            cancelVC.rese_flag = rese_flag
+            cancelVC.user = user
+            cancelVC.day = day
+            cancelVC.userNames = userNames
+            cancelVC.userName = userName
         }
         
     }
     
 }
+

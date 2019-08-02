@@ -18,6 +18,9 @@ class YoyakuCalendarViewController: UIViewController,FSCalendarDelegate,FSCalend
     var rese_flag = 0
     var day = ""
     
+    var userNames = [String]()
+    
+    
     @IBOutlet weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
@@ -25,6 +28,14 @@ class YoyakuCalendarViewController: UIViewController,FSCalendarDelegate,FSCalend
         // デリゲートの設定
         self.calendar.dataSource = self
         self.calendar.delegate = self
+        
+        self.calendar.calendarWeekdayView.weekdayLabels[0].textColor = UIColor.red
+        self.calendar.calendarWeekdayView.weekdayLabels[1].textColor = UIColor.black
+        self.calendar.calendarWeekdayView.weekdayLabels[2].textColor = UIColor.black
+        self.calendar.calendarWeekdayView.weekdayLabels[3].textColor = UIColor.black
+        self.calendar.calendarWeekdayView.weekdayLabels[4].textColor = UIColor.black
+        self.calendar.calendarWeekdayView.weekdayLabels[5].textColor = UIColor.black
+        self.calendar.calendarWeekdayView.weekdayLabels[6].textColor = UIColor.blue
         
     }
     
@@ -96,19 +107,42 @@ class YoyakuCalendarViewController: UIViewController,FSCalendarDelegate,FSCalend
         self.navigationItem.title = day
         
         
-        self.performSegue(withIdentifier: "toYoyakuCheck", sender: nil)
+        
+        print(user)
+        
+        let query = NCMBQuery(className: "Users")
         
         
+        query?.findObjectsInBackground({ (result, error) in
+            if error != nil{
+                SVProgressHUD.dismiss()
+            }else{
+                for userObject in result as! [NCMBObject]{
+                    
+                    let name = userObject.object(forKey: "userName") as! String
+                    self.userNames.append(name)
+                    print(self.userNames)
+                    //userId取得
+                    self.performSegue(withIdentifier: "toYoyakuCheck", sender: nil)
+                    
+                }
+               
+            }
+            
+        })
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toYoyakuCheck" {
             let yoyakuVC = segue.destination as! YoyakuConfirmViewController
-            
+            yoyakuVC.rese_flag = rese_flag
+            yoyakuVC.user = user
             yoyakuVC.day = day
+            yoyakuVC.userNames = userNames
         }
         
     }
     
 }
+

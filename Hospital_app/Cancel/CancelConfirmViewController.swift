@@ -5,655 +5,98 @@
 //  Created by 大江祥太郎 on 2019/07/30.
 //  Copyright © 2019 shotaro. All rights reserved.
 //
-
 import UIKit
 import NCMB
 import SVProgressHUD
 
 class CancelConfirmViewController: UIViewController {
-
-    @IBOutlet weak var userNameLabel: UILabel!
-    
-    @IBOutlet weak var firstReseDateLabel: UIButton!
-    
-    @IBOutlet weak var secondReseDateLabel: UIButton!
-    
-    @IBOutlet weak var thirdReseDateLabel: UIButton!
-    
-    @IBOutlet weak var fourthReseDateLabel: UIButton!
-    
-    @IBOutlet weak var fifthReseDateLabel: UIButton!
     
     var user = ""
+    var rese_flag = 0
+    var day = ""
+    var hour = ""
     var pt = ""
-    var day  = ""
-    var hour_flag = ""
+    var userName = ""
+    var userNames = [String]()
     
     
+    var hour_flag = "0"
+    var moreHour_flag = "0"
     
+    let Minutes20 = ["8:00~8:20","8:20~8:40","8:40~9:00","9:00~9:20","9:20~9:40","9:40~10:00","10:00~10:20","10:20~10:40","10:40~11:00","11:00~11:20","11:20~11:40","11:40~12:00","12:00~12:20","12:20~12:40","15:00~15:20","15:20~15:40","15:40~16:00","16:00~16:20","16:20~16:40","16:40~17:00","17:00~17:20","17:20~17:40","17:40~18:00","18:00~18:20","18:20~18:40"]
+    
+    let Minutes40 = ["8:00~8:40","8:40~9:20","9:20~10:00","10:00~10:40","10:40~11:20","11:20~12:00","12:00~12:40","15:00~15:40","15:40~16:20","16:20~17:00","17:00~17:40","17:40~18:20"]
+    
+    let ptCheck = ["PT1","PT2","PT3"]
+    let ptClassName = ["pt1_yoyaku","pt2_yoyaku","pt3_yoyaku"]
+    
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var ptLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var hourLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
-        let query = NCMBQuery(className: "Users")
-        
-        query?.findObjectsInBackground({ (result, error) in
-            if error != nil{
-                SVProgressHUD.dismiss()
-            }else{
-                for userObject in result as! [NCMBObject]{
-                    let userId = userObject.object(forKey: "userId") as! String
-                    
-                    if self.user == userId{
-                       self.userNameLabel.text = userObject.object(forKey: "userName") as! String
-                        
-                        if userObject.object(forKey: "FirstReseDate") != nil{
-                            self.day = userObject.object(forKey: "FirstReseDay") as! String
-                            self.hour_flag = userObject.object(forKey: "FirstHourFlag") as! String
-                            self.firstReseDateLabel.setTitle(userObject.object(forKey: "FirstReseDate") as! String, for: .normal)
-                        }else{
-                            self.firstReseDateLabel.setTitle("予約しておりません。", for: .normal)
-                            
-                                self.firstReseDateLabel.isEnabled = false
-                        }
-                        if userObject.object(forKey: "SecondReseDate") != nil{
-                            self.day = userObject.object(forKey: "SecondReseDay") as! String
-                           self.hour_flag = userObject.object(forKey: "SecondHourFlag") as! String
-                            self.secondReseDateLabel.setTitle(userObject.object(forKey: "SecondReseDate") as! String, for: .normal)
-                        }else{
-                            self.secondReseDateLabel.setTitle("予約しておりません。", for: .normal)
-                            
-                            self.secondReseDateLabel.isEnabled = false
-                        }
-                        if userObject.object(forKey: "ThirdReseDate") != nil{
-                           self.day = userObject.object(forKey: "ThirdReseDay") as! String
-                            self.hour_flag = userObject.object(forKey: "ThirdHourFlag") as! String
-                            self.thirdReseDateLabel.setTitle(userObject.object(forKey: "ThirdReseDate") as! String, for: .normal)
-                        }else{
-                            self.thirdReseDateLabel.setTitle("予約しておりません。", for: .normal)
-                            
-                            self.thirdReseDateLabel.isEnabled = false
-                        }
-                        if userObject.object(forKey: "FourthReseDate") != nil{
-                            self.day = userObject.object(forKey: "FourthReseDay") as! String
-                            self.hour_flag = userObject.object(forKey: "FourthHourFlag") as! String
-                            self.fourthReseDateLabel.setTitle(userObject.object(forKey: "FourthReseDate") as! String, for: .normal)
-                        }else{
-                            self.fourthReseDateLabel.setTitle("予約しておりません。", for: .normal)
-                            
-                            self.fourthReseDateLabel.isEnabled = false
-                        }
-                        if userObject.object(forKey: "FifthReseDate") != nil{
-                            self.day = userObject.object(forKey: "FiftheseDay") as! String
-                            self.hour_flag = userObject.object(forKey: "FifthHourFlag") as! String
-                            self.fifthReseDateLabel.setTitle(userObject.object(forKey: "FifthReseDate") as! String, for: .normal)
-                        }else{
-                            self.fifthReseDateLabel.setTitle("予約しておりません。", for: .normal)
-                            
-                            self.fifthReseDateLabel.isEnabled = false
-                        }
-                }
+        for i in 0...24{
+            if hour == self.Minutes20[i]{
+                self.hour_flag = String(i)
+            }
+            
+        }
+        for i in 0...11{
+            if hour == self.Minutes40[i]{
+                self.hour_flag = String(i)
+                self.moreHour_flag = String(i+1)
             }
         }
-        })
+        
+        
+        
+        ptLabel.text = pt
+        dateLabel.text = day
+        hourLabel.text = hour
+        userLabel.text = self.userName+"さん"
+        
         
     }
     
-    @IBAction func date(_ sender:UIButton) {
-        
-        let alert = UIAlertController(title: "予約キャンセル", message: "本当によろしいですか？", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            switch sender.tag {
-            case 1:
-                let query = NCMBQuery(className: "Users")
-                
+    @IBAction func toTop(_ sender: Any) {
+        for i in 0...2 {
+            if self.pt == self.ptCheck[i]{
+                let query = NCMBQuery(className: self.ptClassName[i])
                 query?.findObjectsInBackground({ (result, error) in
                     if error != nil{
-                        SVProgressHUD.dismiss()
-                    }else{
-                        for userObject in result as! [NCMBObject]{
-                            let userId = userObject.object(forKey: "userId") as! String
-                            
-                            if self.user == userId{
-                                userObject.setObject(nil, forKey: "FirstReseDate")
-                                userObject.setObject(nil, forKey: "FirstReseDay")
-                                userObject.saveInBackground({ (error) in
-                                    if error != nil{
-                                        print(error)
-                                    }else{
-                                        print("Update Succeed")
-                                    }
-                                })
-                                self.pt = userObject.object(forKey: "FirstPT") as! String
-                            }
-                        }
-                    }
-                })
-                switch self.pt{
-                case "PT1":
-                    let pt1_query = NCMBQuery(className: "pt1_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT2":
-                    let pt1_query = NCMBQuery(className: "pt2_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT3":
-                    let pt1_query = NCMBQuery(className: "pt3_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                default:
-                    break
-                }
-            case 2:
-                let query = NCMBQuery(className: "Users")
-                
-                query?.findObjectsInBackground({ (result, error) in
-                    if error != nil{
-                        SVProgressHUD.dismiss()
-                    }else{
-                        for userObject in result as! [NCMBObject]{
-                            let userId = userObject.object(forKey: "userId") as! String
-                            
-                            if self.user == userId{
-                                userObject.setObject(nil, forKey: "SecondReseDate")
-                                userObject.setObject(nil, forKey: "SecondReseDay")
-                                userObject.saveInBackground({ (error) in
-                                    if error != nil{
-                                        print(error)
-                                    }else{
-                                        print("Update Succeed")
-                                    }
-                                })
-                                self.pt = userObject.object(forKey: "SecondPT") as! String
-                            }
-                        }
-                    }
-                })
-                switch self.pt{
-                case "PT1":
-                    let pt1_query = NCMBQuery(className: "pt1_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT2":
-                    let pt1_query = NCMBQuery(className: "pt2_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT3":
-                    let pt1_query = NCMBQuery(className: "pt3_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                default:
-                    break
-                }
-            case 3:
-                let query = NCMBQuery(className: "Users")
-                
-                query?.findObjectsInBackground({ (result, error) in
-                    if error != nil{
-                        SVProgressHUD.dismiss()
-                    }else{
-                        for userObject in result as! [NCMBObject]{
-                            let userId = userObject.object(forKey: "userId") as! String
-                            
-                            if self.user == userId{
-                                userObject.setObject(nil, forKey: "ThirdReseDate")
-                                userObject.setObject(nil, forKey: "ThirdReseDay")
-                                userObject.saveInBackground({ (error) in
-                                    if error != nil{
-                                        print(error)
-                                    }else{
-                                        print("Update Succeed")
-                                    }
-                                })
-                                self.pt = userObject.object(forKey: "ThirdPT") as! String
-                            }
-                        }
-                    }
-                })
-                switch self.pt{
-                case "PT1":
-                    let pt1_query = NCMBQuery(className: "pt1_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT2":
-                    let pt1_query = NCMBQuery(className: "pt2_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT3":
-                    let pt1_query = NCMBQuery(className: "pt3_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                default:
-                    break
-                }
-            case 4:
-                let query = NCMBQuery(className: "Users")
-                
-                query?.findObjectsInBackground({ (result, error) in
-                    if error != nil{
-                        SVProgressHUD.dismiss()
-                    }else{
-                        for userObject in result as! [NCMBObject]{
-                            let userId = userObject.object(forKey: "userId") as! String
-                            
-                            if self.user == userId{
-                                userObject.setObject(nil, forKey: "FourthReseDate")
-                                userObject.setObject(nil, forKey: "FourthReseDay")
-                                userObject.saveInBackground({ (error) in
-                                    if error != nil{
-                                        print(error)
-                                    }else{
-                                        print("Update Succeed")
-                                    }
-                                })
-                                self.pt = userObject.object(forKey: "FourthPT") as! String
-                            }
-                        }
-                    }
-                })
-                switch self.pt{
-                case "PT1":
-                    let pt1_query = NCMBQuery(className: "pt1_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT2":
-                    let pt1_query = NCMBQuery(className: "pt2_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT3":
-                    let pt1_query = NCMBQuery(className: "pt3_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                default:
-                    break
-                }
-            case 5:
-                let query = NCMBQuery(className: "Users")
-                
-                query?.findObjectsInBackground({ (result, error) in
-                    if error != nil{
-                        SVProgressHUD.dismiss()
-                    }else{
-                        for userObject in result as! [NCMBObject]{
-                            let userId = userObject.object(forKey: "userId") as! String
-                            
-                            if self.user == userId{
-                                userObject.setObject(nil, forKey: "FifthReseDate")
-                                userObject.setObject(nil, forKey: "FifthReseDay")
-                                userObject.saveInBackground({ (error) in
-                                    if error != nil{
-                                        print(error)
-                                    }else{
-                                        print("Update Succeed")
-                                    }
-                                })
-                                self.pt = userObject.object(forKey: "FifthPT") as! String
-                            }
-                        }
-                    }
-                })
-                switch self.pt{
-                case "PT1":
-                    let pt1_query = NCMBQuery(className: "pt1_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT2":
-                    let pt1_query = NCMBQuery(className: "pt2_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                    })
-                case "PT3":
-                    let pt1_query = NCMBQuery(className: "pt3_yoyaku")
-                    
-                    pt1_query?.findObjectsInBackground({ (result, error) in
-                        if error != nil{
-                            
-                        }else{
-                            for userObject in result as! [NCMBObject]{
-                                let userDate = userObject.object(forKey: "date") as? String
-                                
-                                if self.day == userDate{
-                                    
-                                    userObject.setObject(nil, forKey: self.hour_flag)
-                                    
-                                    userObject.saveInBackground({ (error) in
-                                        if error != nil{
-                                            print(error)
-                                        }else{
-                                            print("Update Succeed")
-                                        }
-                                    })
-                                }
-                                
-                            }
-                        }
-                        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
                         
-                    })
-                default:
-                    break
-                }
-                
-            default:
-                break
+                    }else{
+                        
+                        for userObject in result as! [NCMBObject]{
+                            let userDate = userObject.object(forKey: "date") as? String
+                            
+                            if self.day == userDate{
+                                userObject.setObject("", forKey: self.hour_flag)
+                                userObject.saveInBackground({ (error) in
+                                    if error != nil{
+                                        print(error)
+                                    }else{
+                                        print("Update Succeed")
+                                    }
+                                })
+                                
+                                
+                            }
+                            
+                        }
+                    }
+                })
             }
         }
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .default, handler: nil)
-        alert.addAction(okAction)
-        alert.addAction(cancelAction)
-        
-        self.present(alert, animated: true, completion: nil)
         
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.4) {
+            self.navigationController?.popToRootViewController(animated: true)
+        }
         
         
     }
