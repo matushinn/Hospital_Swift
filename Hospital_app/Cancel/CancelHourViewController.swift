@@ -41,6 +41,7 @@ class CancelHourViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         self.navigationItem.title = self.userName
         loadButton()
     }
