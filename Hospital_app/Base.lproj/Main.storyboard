@@ -59,6 +59,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="予約管理システム" id="2xG-nD-sWc">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="nnu-gd-636"/>
                         <barButtonItem key="rightBarButtonItem" title="管理者" id="bpL-S3-Fem">
                             <connections>
                                 <action selector="admin:" destination="BYZ-38-t0r" id="g82-9u-AUC"/>
@@ -645,7 +646,7 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
-        <!--Title-->
+        <!--Rese Or Search View Controller-->
         <scene sceneID="GhS-Bh-F0U">
             <objects>
                 <viewController id="vT3-QS-aHb" customClass="ReseOrSearchViewController" customModule="Hospital_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -693,7 +694,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eoQ-br-jHS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="eS2-fd-Gp0">
+                    <navigationItem key="navigationItem" id="eS2-fd-Gp0">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="xru-rx-3FB"/>
                         <barButtonItem key="rightBarButtonItem" title="TOPへ" id="UZy-rb-qEX">
                             <connections>
                                 <action selector="toTop:" destination="vT3-QS-aHb" id="1XY-ei-ZNW"/>
@@ -1105,7 +1107,7 @@
             </objects>
             <point key="canvasLocation" x="4515.9420289855079" y="-1337.2767857142856"/>
         </scene>
-        <!--Title-->
+        <!--Add Or Search View Controller-->
         <scene sceneID="o8m-TK-NTY">
             <objects>
                 <viewController id="Gfd-yT-qpx" customClass="AddOrSearchViewController" customModule="Hospital_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -1153,7 +1155,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="swe-2K-Mg6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ToB-YY-X86">
+                    <navigationItem key="navigationItem" id="ToB-YY-X86">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="LyH-OS-vxX"/>
                         <barButtonItem key="rightBarButtonItem" title="TOPへ" id="02T-Ev-UJ8">
                             <connections>
                                 <action selector="toTop:" destination="Gfd-yT-qpx" id="ctc-eR-izr"/>
@@ -1618,6 +1621,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uni-Rz-mUL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="vuh-op-0nz">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="ZZi-91-hpd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="calendar" destination="QIo-XE-uY0" id="Gm6-VO-GGS"/>
                         <segue destination="7yc-aa-bXa" kind="show" identifier="toCancelHour" id="wRg-PI-Yr6"/>

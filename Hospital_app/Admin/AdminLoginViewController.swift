@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class AdminLoginViewController: UIViewController {
+class AdminLoginViewController: UIViewController,UITextFieldDelegate{
     
     
     @IBOutlet weak var userIdTextField: UITextField!
@@ -20,8 +20,14 @@ class AdminLoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        userIdTextField.delegate = self
+        passwordTextField.delegate = self
     }
-    
+    //エンターキーで返す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     @IBAction func login(_ sender: Any) {
         if userIdTextField.text == "taro" && passwordTextField.text == "1234" {
             self.performSegue(withIdentifier: "toAdTop", sender: nil)

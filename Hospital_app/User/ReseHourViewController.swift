@@ -42,7 +42,20 @@ class ReseHourViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        let query = NCMBQuery(className: "Users")
+        
+        query?.findObjectsInBackground({ (result, error) in
+            if error != nil{
+                SVProgressHUD.dismiss()
+            }else{
+                for userObject in result as! [NCMBObject]{
+                    let name = userObject.object(forKey: "userName") as! String
+                    self.userNames.append(name)
+                }
+            }
+        })
         self.navigationItem.title = self.userName
+        print(userNames)
         loadButton()
     }
     

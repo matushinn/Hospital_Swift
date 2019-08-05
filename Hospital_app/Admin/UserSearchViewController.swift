@@ -62,6 +62,11 @@ class UserSearchViewController: UIViewController,UITextFieldDelegate {
         
         
     }
+    //エンターキーで返す
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     @IBAction func toTop(_ sender: Any) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
